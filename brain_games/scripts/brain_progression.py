@@ -1,53 +1,50 @@
 #!/usr/bin/env python3
-import prompt
-from random import randint, choice
+from random import randint
 
 def progression():
 
-    num_progression = randint(3, 19)
+    num_progression = randint(3, 15)
     start_progression = randint(1, 100)
-    finish_progression = start_progression * 10
+    
+    finish_progression = start_progression + (num_progression * 10)
+    removed_num_in_progression = randint(1, 9) # случайное число, будет заменено на две точки ..
+    
+    progression_sequence = [str(i) for i in range(start_progression, finish_progression, num_progression)] # создание верной последовательности
 
-    nums_progression = [i for i in range(start_progression, finish_progression, num_progression)]
+    correct_result = progression_sequence[removed_num_in_progression]
 
-    print(num_progression)
+    progression_sequence[removed_num_in_progression] = ".."
+
+    return progression_sequence, int(correct_result)
 
 
-def welcome_user():
+def game_progression():
 
     print("Welcome to the Brain Games!")
-    name = prompt.string("May I have your name? ")
-    print(f"Hello, {name}")
+    user_name = input("May I have your name? ")
+    print(f"Hello, {user_name}")
+    print("What number is missing in the progression?")
 
-    print("Find the greatest common divisor of given numbers.")
-
-    right_answer = 0
+    count_correct_answer = 0
 
     while True:
 
-        random_num1 = randint(1, 30)
-        random_num2 = randint(1, 30)
+        progression_nums, correct_answer = progression()
 
+        print("Question:", " ".join(progression_nums))
 
-        print(f"Question: {random_num1} {random_num2}")
-        answer = int(input("Your answer: "))
-        correct_answer = nok(random_num1, random_num2)
+        you_answer = int(input("Your answer: "))
 
-        if answer == correct_answer:
-            print("Correct!")
-            right_answer += 1
+        if you_answer == correct_answer:
+            print('Correct!')
+            count_correct_answer += 1
         else:
-            print(f"\'{answer}\' is wrong answer ;(. Correct answer was \'{correct_answer}\'.")
-            print(f"Let's try again, {name}!")
-            right_answer = 0
+            print(f"'{you_answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {user_name}!")
+            count_correct_answer = 0
 
-        if right_answer == 3:
-            print(f"Congratulations, {name}!")
-            break
-
-def main():
-    progression()
-
-
-if __name__ == "__main__":
-    main()
+        if count_correct_answer == 3:
+            print(f"Congratulations, {user_name}!")
+            
+                        
+game_progression()
