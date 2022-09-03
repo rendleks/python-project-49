@@ -45,6 +45,7 @@ def game_progression():
 
         if count_correct_answer == 3:
             print(f"Congratulations, {user_name}!")
+            break
             
                         
 game_progression()
