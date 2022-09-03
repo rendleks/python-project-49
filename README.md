@@ -9,5 +9,8 @@
 ### Demonstration of brains-calc
 [![asciicast](https://asciinema.org/a/mdlcQsn8pHcENUlI3mpfeB7wu.svg)](https://asciinema.org/a/mdlcQsn8pHcENUlI3mpfeB7wu)
 
-### Demonstation of brains-gcd
+### Demonstration of brains-gcd
 [![asciicast](https://asciinema.org/a/XyQyOapUJwDdTJ23KQu25i5Pv.svg)](https://asciinema.org/a/XyQyOapUJwDdTJ23KQu25i5Pv)
+
+### Demonstration of brain-progression
+[![asciicast](https://asciinema.org/a/YmBM34141DqhmYAZQHA2STxD1.svg)](https://asciinema.org/a/YmBM34141DqhmYAZQHA2STxD1)
