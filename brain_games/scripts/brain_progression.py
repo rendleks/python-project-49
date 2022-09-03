@@ -47,5 +47,9 @@ def game_progression():
             print(f"Congratulations, {user_name}!")
             break
             
-                        
-game_progression()
+def main():
+    game_progression()
+
+
+if __name__ == "__main__":
+    main()
