@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "Simple games by hexlet"
 authors = ["rendleks <rendleks@bk.ru>"]
 packages = [
     { include = "brain_games" },
