@@ -1,3 +1,9 @@
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/rendleks/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/rendleks/python-project-49/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f157aac236ff96d369f2/maintainability)](https://codeclimate.com/github/rendleks/python-project-49/maintainability)
+
+***
+
 # Brain-games
 
 Brain-games - simple console games in python.
@@ -7,7 +13,7 @@ Brain-games - simple console games in python.
 ```bash
 $ git clone https://github.com/rendleks/python-project-49.git
 $ cd python-project-49
-$ make python3 -m pip install --user dist/*.whl
+$ make package-install
 ```
 ### Run games
 
@@ -20,11 +26,6 @@ $ brain-progression
 $ brain-prime
 ```
 
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/rendleks/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/rendleks/python-project-49/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/f157aac236ff96d369f2/maintainability)](https://codeclimate.com/github/rendleks/python-project-49/maintainability)
-
-***
 ### Demonstration of brains-games
 [![asciicast](https://asciinema.org/a/WHvsZH9ChbgnMM8evjORQVgOr.svg)](https://asciinema.org/a/WHvsZH9ChbgnMM8evjORQVgOr)
 
