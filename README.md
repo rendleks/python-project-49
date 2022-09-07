@@ -1,3 +1,25 @@
+# Brain-games
+
+Brain-games - simple console games in python.
+
+### Install
+
+```bash
+$ git clone https://github.com/rendleks/python-project-49.git
+$ cd python-project-49
+$ make python3 -m pip install --user dist/*.whl
+```
+### Run games
+
+```bash
+$ brain-games
+$ brain-even
+$ brain-calc
+$ brain-gcd
+$ brain-progression
+$ brain-prime
+```
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/rendleks/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/rendleks/python-project-49/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/f157aac236ff96d369f2/maintainability)](https://codeclimate.com/github/rendleks/python-project-49/maintainability)
