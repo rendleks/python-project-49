@@ -16,7 +16,6 @@ def welcome_user():
     while True:
         generate_numbers = randint(1, 100)
 
-
         print("Question:", generate_numbers)
         answer = prompt.string("Your answer: ")
 

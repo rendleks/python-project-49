@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import prompt
-from random import randint, choice
+from random import randint
 
 
 def nok(a, b):
@@ -16,7 +16,7 @@ def nok(a, b):
 
         if a % i == 0 and b % i == 0:
             return i
-            breaks
+            break
 
 
 def welcome_user():
@@ -34,8 +34,8 @@ def welcome_user():
         random_num1 = randint(1, 30)
         random_num2 = randint(1, 30)
 
+        print(f"Question: {random_num1}{random_num2}")
 
-        print(f"Question: {random_num1} {random_num2}")
         answer = int(input("Your answer: "))
         correct_answer = nok(random_num1, random_num2)
 
@@ -43,13 +43,15 @@ def welcome_user():
             print("Correct!")
             right_answer += 1
         else:
-            print(f"\'{answer}\' is wrong answer ;(. Correct answer was \'{correct_answer}\'.")
+            print(f"\'{answer}\' is wrong answer ;(. \
+            Correct answer was \'{correct_answer}\'.")
             print(f"Let's try again, {name}!")
             break
 
         if right_answer == 3:
             print(f"Congratulations, {name}!")
             break
+
 
 def main():
     welcome_user()
