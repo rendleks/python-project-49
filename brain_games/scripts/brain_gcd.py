@@ -45,7 +45,7 @@ def welcome_user():
         else:
             print(f"\'{answer}\' is wrong answer ;(. Correct answer was \'{correct_answer}\'.")
             print(f"Let's try again, {name}!")
-            right_answer = 0
+            break
 
         if right_answer == 3:
             print(f"Congratulations, {name}!")

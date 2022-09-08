@@ -28,10 +28,10 @@ def welcome_user():
             print("Correct!")
         elif generate_numbers % 2 != 0 and answer == 'yes':
             print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\n Let's try again, {name}!")
-            correct_answer = 0
+            break
         elif generate_numbers % 2 == 0 and answer == 'no':
             print(f"'no' is wrong answer ;(. Correct answer was 'yes'.\n Let's try again, {name}!")
-            correct_answer = 0
+            break
 
         if correct_answer == 3:
             print(f"Congratulations, {name}!")

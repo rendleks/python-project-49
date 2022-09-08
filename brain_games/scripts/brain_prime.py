@@ -46,13 +46,13 @@ def game_prime():
         elif you_answer == "no" and is_prime == True:
             print(f"'No' is wrong answer ;(. Correct answer was 'yes'.")
             print(f"Let's try again, {user_name}!")
-            count_correct_answer = 0
+            break
 
             
         elif you_answer == 'yes' and is_prime == False:
             print(f"'Yes' is wrong answer ;(. Correct answer was 'no'.")
             print(f"Let's try again, {user_name}!")
-            count_correct_answer = 0
+            break
 
 
         if count_correct_answer == 3:
