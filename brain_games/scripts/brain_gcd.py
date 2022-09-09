@@ -12,7 +12,7 @@ def nok(a, b):
     else:
         max_num = b
 
-    for i in range(max_num+1, 0, -1):
+    for i in range(max_num + 1, 0, -1):
 
         if a % i == 0 and b % i == 0:
             return i

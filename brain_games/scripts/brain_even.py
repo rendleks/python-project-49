@@ -7,7 +7,7 @@ ANSWER_YES = 'yes'
 ANSWER_NO = 'no'
 
 
-def welcome_user():
+def game_even():
 
     print("Welcome to the Brain Games!")
     name = prompt.string("May I have your name? ")
@@ -29,14 +29,10 @@ def welcome_user():
         elif generate_numbers % 2 != 0 and answer == ANSWER_NO:
             correct_answer += 1
             print("Correct!")
-        elif generate_numbers % 2 != 0 and answer == ANSWER_YES:
+        elif generate_numbers % 2 != 0 and answer == ANSWER_YES or \
+                generate_numbers % 2 == 0 and answer == ANSWER_NO:
             print(f"'{ANSWER_YES}' is wrong answer ;(. "
                   f"Correct answer was '{ANSWER_NO}'."
-                  f"\nLet's try again, {name}!")
-            break
-        elif generate_numbers % 2 == 0 and answer == ANSWER_NO:
-            print(f"'{ANSWER_NO}' is wrong answer ;(. "
-                  f"Correct answer was '{ANSWER_YES}'."
                   f"\nLet's try again, {name}!")
             break
 
@@ -46,7 +42,7 @@ def welcome_user():
 
 
 def main():
-    welcome_user()
+    game_even()
 
 
 if __name__ == "__main__":

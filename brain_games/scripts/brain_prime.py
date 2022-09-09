@@ -9,9 +9,9 @@ def random_simple_num():
 
     k = 0
 
-    for i in range(2, random_number // 2+1):
+    for i in range(2, random_number // 2 + 1):
         if (random_number % i == 0):
-            k = k+1
+            k = k + 1
 
     if k == 0:
         return random_number, True
@@ -42,14 +42,10 @@ def game_prime():
         elif you_answer == ANSWER_NO and not is_prime:
             print('Correct!')
             count_correct_answer += 1
-        elif you_answer == ANSWER_NO and is_prime:
+        elif you_answer == ANSWER_NO and is_prime or \
+                you_answer == ANSWER_YES and not is_prime:
             print(f"'{ANSWER_NO}' is wrong answer ;(."
-                  "Correct answer was '{ANSWER_YES}'.")
-            print(f"Let's try again, {user_name}!")
-            break
-        elif you_answer == 'yes' and not is_prime:
-            print(f"'{ANSWER_YES}' is wrong answer ;(."
-                  "Correct answer was '{ANSWER_NO}'.")
+                  f"Correct answer was '{ANSWER_YES}'.")
             print(f"Let's try again, {user_name}!")
             break
         if count_correct_answer == 3:
