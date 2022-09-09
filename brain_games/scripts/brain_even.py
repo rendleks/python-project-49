@@ -31,13 +31,13 @@ def welcome_user():
             print("Correct!")
         elif generate_numbers % 2 != 0 and answer == ANSWER_YES:
             print(f"'{ANSWER_YES}' is wrong answer ;(. "
-                  "Correct answer was '{ANSWER_NO}'."
-                  "\nLet's try again, {name}!")
+                  f"Correct answer was '{ANSWER_NO}'."
+                  f"\nLet's try again, {name}!")
             break
         elif generate_numbers % 2 == 0 and answer == ANSWER_NO:
             print(f"'{ANSWER_NO}' is wrong answer ;(. "
-                  "Correct answer was '{ANSWER_YES}'."
-                  "\nLet's try again, {name}!")
+                  f"Correct answer was '{ANSWER_YES}'."
+                  f"\nLet's try again, {name}!")
             break
 
         if correct_answer == 3:
