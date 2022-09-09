@@ -10,7 +10,9 @@ def progression():
     # случайное число, будет заменено на две точки ..
     removed_num_in_progression = randint(1, 9)
     # создание верной последовательности
-    progression_sequence = [str(i) for i in range(start_progression, finish_progression, num_progression)]
+    progression_sequence = [str(i) for i in range(start_progression,
+                                                  finish_progression,
+                                                  num_progression)]
 
     correct_result = progression_sequence[removed_num_in_progression]
 
@@ -41,7 +43,7 @@ def game_progression():
             count_correct_answer += 1
         else:
             print(f"'{you_answer}' is wrong answer ;(."
-                   "Correct answer was '{correct_answer}'.")
+                  "Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {user_name}!")
             break
 

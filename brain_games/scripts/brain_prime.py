@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-from random import choice, randint
+from random import randint
+from brain_games.scripts.brain_even import ANSWER_NO, ANSWER_YES
 
 
 def random_simple_num():
@@ -14,7 +15,6 @@ def random_simple_num():
 
     if k == 0:
         return random_number, True
-    
     return random_number, False
 
 
@@ -23,7 +23,8 @@ def game_prime():
     print("Welcome to the Brain Games!")
     user_name = input("May I have your name? ")
     print(f"Hello, {user_name}")
-    print("Answer \"yes\" if given number is prime. Otherwise answer \"no\".")
+    print("Answer \"yes\" if given number is prime. "
+          "Otherwise answer \"no\".")
 
     count_correct_answer = 0
 
@@ -35,30 +36,27 @@ def game_prime():
 
         you_answer = input("Your answer: ")
 
-        if you_answer == "yes" and is_prime == True:
+        if you_answer == ANSWER_YES and is_prime:
             print('Correct!')
             count_correct_answer += 1
-        
-        elif you_answer == "no" and is_prime == False:
+        elif you_answer == ANSWER_NO and not is_prime:
             print('Correct!')
             count_correct_answer += 1
-
-        elif you_answer == "no" and is_prime == True:
-            print(f"'No' is wrong answer ;(. Correct answer was 'yes'.")
+        elif you_answer == ANSWER_NO and is_prime:
+            print(f"'{ANSWER_NO}' is wrong answer ;(."
+                  "Correct answer was '{ANSWER_YES}'.")
             print(f"Let's try again, {user_name}!")
             break
-
-            
-        elif you_answer == 'yes' and is_prime == False:
-            print(f"'Yes' is wrong answer ;(. Correct answer was 'no'.")
+        elif you_answer == 'yes' and not is_prime:
+            print(f"'{ANSWER_YES}' is wrong answer ;(."
+                  "Correct answer was '{ANSWER_NO}'.")
             print(f"Let's try again, {user_name}!")
             break
-
-
         if count_correct_answer == 3:
             print(f"Congratulations, {user_name}!")
             break
-            
+
+
 def main():
     game_prime()
 

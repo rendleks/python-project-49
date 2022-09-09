@@ -3,6 +3,10 @@ import prompt
 from random import randint
 
 
+ANSWER_YES = 'yes'
+ANSWER_NO = 'no'
+
+
 def welcome_user():
 
     print("Welcome to the Brain Games!")
@@ -19,17 +23,21 @@ def welcome_user():
         print("Question:", generate_numbers)
         answer = prompt.string("Your answer: ")
 
-        if generate_numbers % 2 == 0 and answer == 'yes':
+        if generate_numbers % 2 == 0 and answer == ANSWER_YES:
             correct_answer += 1
             print("Correct!")
-        elif generate_numbers % 2 != 0 and answer == 'no':
+        elif generate_numbers % 2 != 0 and answer == ANSWER_NO:
             correct_answer += 1
             print("Correct!")
-        elif generate_numbers % 2 != 0 and answer == 'yes':
-            print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\n Let's try again, {name}!")
+        elif generate_numbers % 2 != 0 and answer == ANSWER_YES:
+            print(f"'{ANSWER_YES}' is wrong answer ;(. "
+                  "Correct answer was '{ANSWER_NO}'."
+                  "\nLet's try again, {name}!")
             break
-        elif generate_numbers % 2 == 0 and answer == 'no':
-            print(f"'no' is wrong answer ;(. Correct answer was 'yes'.\n Let's try again, {name}!")
+        elif generate_numbers % 2 == 0 and answer == ANSWER_NO:
+            print(f"'{ANSWER_NO}' is wrong answer ;(. "
+                  "Correct answer was '{ANSWER_YES}'."
+                  "\nLet's try again, {name}!")
             break
 
         if correct_answer == 3:
